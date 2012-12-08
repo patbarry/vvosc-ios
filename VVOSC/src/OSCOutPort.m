@@ -111,16 +111,16 @@
 	return YES;
 }
 
-- (void) sendThisBundle:(OSCBundle *)b	{
+- (void) sendBundle:(OSCBundle *)b	{
 	if ((deleted) || (sock == -1) || (b == nil))
 		return;
 	
 	OSCPacket		*newPacket = [OSCPacket createWithContent:b];
 	
 	if (newPacket != nil)
-		[self sendThisPacket:newPacket];
+		[self sendPacket:newPacket];
 }
-- (void) sendThisMessage:(OSCMessage *)m	{
+- (void) sendMessage:(OSCMessage *)m	{
 	/*
 	if ((deleted) || (m==nil))
 		return;
@@ -148,11 +148,11 @@
 	OSCPacket		*newPacket = [OSCPacket createWithContent:m];
 	
 	if (newPacket != nil)
-		[self sendThisPacket:newPacket];
+		[self sendPacket:newPacket];
 	else
 		NSLog(@"\t\terr: couldnt create packet at %s",__func__);
 }
-- (void) sendThisPacket:(OSCPacket *)p	{
+- (void) sendPacket:(OSCPacket *)p	{
 	//NSLog(@"%s",__func__);
 	if ((deleted) || (sock == -1) || (p == nil))
 		return;

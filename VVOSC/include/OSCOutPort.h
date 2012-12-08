@@ -41,11 +41,11 @@ the documentation here only covers the basics, the header file for this class is
 - (BOOL) createSocket;
 
 ///	sends the passed bundle to this port's address/port
-- (void) sendThisBundle:(OSCBundle *)b;
+- (void) sendBundle:(OSCBundle *)b;
 ///	sends the passed message to this port's address/port
-- (void) sendThisMessage:(OSCMessage *)m;
+- (void) sendMessage:(OSCMessage *)m;
 ///	sends the passed packet to this port's address/port
-- (void) sendThisPacket:(OSCPacket *)p;
+- (void) sendPacket:(OSCPacket *)p;
 
 ///	changes the address this output will send to the passed address
 - (void) setAddressString:(NSString *)n;

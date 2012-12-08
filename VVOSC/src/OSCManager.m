@@ -349,7 +349,7 @@
 			//	send the message out the port
 			if (outPort != nil)	{
 				//NSLog(@"\t\tfound matching output (%@), sending the reply...",outPort);
-				[outPort sendThisMessage:m];
+				[outPort sendMessage:m];
 			}
 		}
 	}
