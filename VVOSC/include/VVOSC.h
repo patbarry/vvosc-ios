@@ -19,6 +19,7 @@
 #import "OSCStringAdditions.h"
 
 
+// forked from: https://github.com/markcerqueira/vvosc-ios
 
 
 ///	Most common means of passing OSC data to your application.  Delegates of OSCManager and OSCInPort should support this protocol.
