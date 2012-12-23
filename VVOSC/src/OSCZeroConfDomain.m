@@ -32,7 +32,7 @@
 		serviceBrowser = [[NSNetServiceBrowser alloc] init];
 		[serviceBrowser setDelegate:(id)self];
 		//[serviceBrowser setDelegate:(id <NSNetServiceBrowserDelegate>)self];
-		[serviceBrowser searchForServicesOfType:@"_lumigeek._udp" inDomain:domainString];
+		[serviceBrowser searchForServicesOfType:@"_lumigeek-player._tcp" inDomain:domainString];
 		
 		return self;
 	}

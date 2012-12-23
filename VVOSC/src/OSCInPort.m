@@ -178,7 +178,7 @@
 		}
 		zeroConfDest = [[NSNetService alloc]
 			initWithDomain:@"local."
-			type:@"_lumigeek._udp."
+			type:@"_lumigeek-player._tcp."
 			name:[NSString stringWithFormat:@"%@ %@",[[UIDevice currentDevice] name],portLabel]
 			port:port];
 		[zeroConfDest publish];
