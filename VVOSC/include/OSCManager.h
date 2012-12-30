@@ -48,6 +48,9 @@ Incoming OSC data is initially received by an OSCInPort; fundamentally, in ports
 - (id) initWithInPortClass:(Class)i outPortClass:(Class)o;
 - (void) _generalInit;
 
+- (void)startOutPortBonjourSearch; // automatically creates OSCOutPorts for any lumigeek players found via Bonjour/ZeroConf .. search is on by default
+- (void)stopOutPortBonjourSearch;
+
 ///	Deletes all input ports
 - (void) deleteAllInputs;
 ///	Deletes all output ports

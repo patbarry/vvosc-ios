@@ -97,6 +97,19 @@
 	[super dealloc];
 }
 
+- (void)startOutPortBonjourSearch
+{
+    if (zeroConfManager == nil) {
+        zeroConfManager = [[OSCZeroConfManager alloc] initWithOSCManager:self];
+    }
+}
+
+- (void)stopOutPortBonjourSearch
+{
+    [zeroConfManager release];
+    zeroConfManager = nil;
+}
+
 - (void) deleteAllInputs	{
 	BOOL			postNotification = NO;
 	[inPortArray wrlock];
