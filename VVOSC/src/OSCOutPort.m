@@ -121,6 +121,10 @@
 		[self sendPacket:newPacket];
 }
 - (void) sendMessage:(OSCMessage *)m	{
+    
+    
+    NSLog(@"\nsending message: \n%@\nhex:\n%@", m, [m writeToNSData]);
+    
 	/*
 	if ((deleted) || (m==nil))
 		return;
