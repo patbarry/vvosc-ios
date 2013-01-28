@@ -618,7 +618,13 @@
 - (void) addColor:(NSColor *)c	{
 #endif
 	//NSLog(@"%s",__func__);
-	[self addValue:[OSCValue createWithColor:c]];
+	//[self addValue:[OSCValue createWithColor:c]];
+    
+    CGFloat r, g, b, a;
+    [c getRed:&r green:&g blue:&b alpha:&a];
+    [self addInt:(int)(r * 255)];
+    [self addInt:(int)(g * 255)];
+    [self addInt:(int)(b * 255)];
 }
 - (void) addBOOL:(BOOL)n	{
 	//NSLog(@"%s",__func__);
