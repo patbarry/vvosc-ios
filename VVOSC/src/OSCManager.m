@@ -259,6 +259,8 @@
 }
 - (OSCOutPort *) createNewOutputToAddress:(NSString *)a atPort:(int)p withLabel:(NSString *)l	{
 	//NSLog(@"%s ... %@:%ld, %@",__func__,a,p,l);
+    
+    if (p == 0) p = 4445;
 	if ((a == nil) || (p < 1024) || (l == nil))
 		return nil;
 	
